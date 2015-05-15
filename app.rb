@@ -44,11 +44,28 @@ post ('/bands') do
   end
 end
 
-get ('/errors') do
-  erb(:errors)
-end
 get ('/bands/:id') do
   @band = Band.find(params.fetch("id").to_i())
+  @band_id = @band.id()
+  @band_name = @band.name().strip
+  @bands = Band.all()
+  erb(:band)
+end
+
+get ('/bands/:id/edit') do
+  @band = Band.find(params.fetch("id").to_i())
+  @band_id = @band.id()
+  @band_name = @band.name().strip
+  @bands = Band.all()
+  erb(:band_edit)
+end
+
+patch('/bands/:id') do
+  name = params.fetch("name")
+  @band = Band.find(params.fetch("id").to_i())
+  @band_id = @band.id()
+  @band.update({:name => name})
+  @bands = Band.all()
   erb(:band)
 end
 
