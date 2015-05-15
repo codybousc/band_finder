@@ -11,6 +11,10 @@ developed with ruby 1.9.3p0
 ####Setup
 _______
 
+Install Band Finder by first cloning the repository.
+
+$git clone https://github.com/codybousc/band_finder.git
+
 Gemfile is included in root folder.
 
 Make sure to bundle gems before using Band Finder:
@@ -32,6 +36,12 @@ Database will need to be created using postgres/activerecord:
     Next:
 
     $ rake db:migrate
+
+    Start the webserver:
+
+    $ruby app.rb
+
+    In your browser, go to http://localhost:4567
 
 
 

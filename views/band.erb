@@ -9,4 +9,19 @@
   <input id="name" name="name" type="text">
 
   <button class="submit">Update Band</button>
+
+
+<% @all_venues.each do |venue| %>
+   <div class="checkbox">
+     <label>
+       <input type="checkbox" name="venue_id[]" value="<%= venue.id() %>"><%= venue.name() %>
+binding.pry
+     </label>
+   </div>
+ <% end %>
+
+
+
+ <button type="submit">Add Venue</button>
+
 </form>
