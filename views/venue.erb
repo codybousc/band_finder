@@ -1,0 +1,32 @@
+<h1><%= @venue.name %></h1>
+
+recipe = band
+category = venue
+
+<% if @bands.any? %>
+  <% @bands.each do |band| %>
+  <ul>
+    <li><p><a href="/bands/<%= band.id() %>"><%= band.name %></a>
+      <form action="/bands/<%= band.id() %>" method="post">
+        <input name="_method" type="hidden" value="delete">
+        <button type="submit">Delete Band</button>
+      </form>
+    </p>
+    </li>
+  </ul>
+  <% end %>
+<% else %>
+  <p>You haven't added any bands for this venue yet!</p>
+<% end %>
+
+<h3>Add a new band</h3>
+
+
+
+<form action="/bands" method="post">
+
+  <input id="venue_id" name="venue_id" type="hidden" value=<%= @venue.id() %> >
+  <input placeholder="Band Name" id="name" name="name" type="text" class="form-control">
+
+  <button type="submit">Add Band</button>
+</form>
