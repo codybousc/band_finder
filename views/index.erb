@@ -1,0 +1,11 @@
+<h1> Band Finder </h1>
+
+<h4> Venues: </h4>
+
+<ul>
+  <% @all_venues.each do |venue| %>
+    <li><a href="/venues/<%= venue.id() %>"><%= venue.name %></a>
+  <% end %>
+</ul>
+
+<p><a href="<%/venues/new"</a>Add a new venue</p>
