@@ -44,3 +44,10 @@ get ('/bands/:id') do
   @band = Band.find(params.fetch("id").to_i())
   erb(:band)
 end
+
+delete ('/bands/:id') do
+  @band = Band.find(params.fetch("id").to_i())
+  @band.delete
+  @all_venues = Venue.all()
+  erb(:index)
+end
