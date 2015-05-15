@@ -1,0 +1,8 @@
+require('sinatra')
+require('sinatra/reloader')
+require("sinatra/activerecord")
+also_reload('lib/**/*.rb')
+require('./lib/band')
+require('./lib/venue')
+require('pg')
+require('pry')
