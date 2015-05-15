@@ -37,9 +37,16 @@ post ('/bands') do
   @venue = Venue.find(venue_id)
   @venue.bands.push(new_band)
   @bands = @venue.bands
+  if new_band.save()
   erb(:venue)
+  else
+    erb(:errors)
+  end
 end
 
+get ('/errors') do
+  erb(:errors)
+end
 get ('/bands/:id') do
   @band = Band.find(params.fetch("id").to_i())
   erb(:band)

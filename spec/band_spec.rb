@@ -12,4 +12,9 @@ describe(Band) do
     new_band = Band.new({:name => ""})
     expect(new_band.save()).to(eq(false))
   end
+
+  it("converts the band name to upcase") do
+   band = Band.create({:name => "manu"})
+   expect(band.name()).to(eq("Manu"))
+ end
 end
