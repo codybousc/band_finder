@@ -1,4 +1,50 @@
-
-
 Band Finder
-===========================================
+=======================================
+###created by: Cody Bouscaren
+
+Band Finder is a web application that allows users to track their favorite bands, and keep track of which venues those bands have played at in the past.
+
+
+developed with ruby 1.9.3p0
+
+
+####Setup
+_______
+
+Gemfile is included in root folder.
+
+Make sure to bundle gems before using Band Finder:
+
+    $ gem install bundler
+    $ bundle
+
+
+Database will need to be created using postgres/activerecord:
+
+    $ postgres
+
+    Leave this running in its own window
+
+    In a new tab:
+
+    $ rake db:create
+
+    Next:
+
+    $ rake db:migrate
+
+
+
+####Debug
+________
+
+For bug issues contact codybousc@gmail.com
+
+
+####License
+_________
+
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Epicodus
