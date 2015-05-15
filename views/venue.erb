@@ -1,7 +1,5 @@
 <h1><%= @venue.name %></h1>
 
-recipe = band
-category = venue
 
 <% if @bands.any? %>
   <% @bands.each do |band| %>
@@ -27,6 +25,7 @@ category = venue
 
   <input id="venue_id" name="venue_id" type="hidden" value=<%= @venue.id() %> >
   <input placeholder="Band Name" id="name" name="name" type="text" class="form-control">
+  <br>
 
   <button type="submit">Add Band</button>
 </form>

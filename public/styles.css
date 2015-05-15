@@ -1,0 +1,31 @@
+
+.jumbotron {
+  position: relative;
+  background: #0000FF url("jumbotron-md.png") center center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  background: rgb(200, 54, 54); /* This is for ie8 and below */
+  background: rgba(200, 54, 54, 0.5);
+}
+
+body {
+
+  background: url('http://www.scbs.org/wp/wp-content/uploads/2014/08/fox-theatre-oakland-stage-crowd-lights.jpg');
+
+}
+
+.a {
+  color: #777;
+
+}
+
+.h1 {
+
+  #FFFFFF
+}
+
+.jumbotron .jumbotron-text {
+  color: #FFFFFF;
+}
